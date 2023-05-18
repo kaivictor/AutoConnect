@@ -40,33 +40,33 @@
 
 &emsp;config:用户配置文件数据, popToast:弹窗主体变量, driver:网络适配器信息
 
-&emsp;##### Program.check
+##### &emsp;Program.check
 
 &emsp;用于检查配置文件是否存在（基本）错误。
 
-&emsp;##### Program.checkInternet
+##### &emsp;Program.checkInternet
 
 &emsp;检查网络函数，使用此函数返回网络检测信息
 
 &emsp;config:用户配置文件数据, popToast:弹窗主体变量, driver:网络适配器信息
 
-&emsp;##### Program.loadConfig
+##### &emsp;Program.loadConfig
 
 &emsp;加载配置文件，返回配置文件数据
 
-&emsp;##### Program.main
+##### &emsp;Program.main
 
 &emsp;编程接口，实现对<code>Program.program</code>的循环调用与结果处理
 
 &emsp;arguement:处理“重试”调用，判断是否是正常调用（暂时没有处理该变量）
 
-&emsp;##### Program.program
+##### &emsp;Program.program
 
 &emsp;调用<code>Program.loadConfig</code>,<code>Program.checkInternet</code>,<code>Program.autoLogon</code>实现程序功能
 
 &emsp;checkInterne:是否检查网络，用于程序启动后跳过网络检测，立即登录
 
-&emsp;##### Program.setshortcut
+##### &emsp;Program.setshortcut
 
 &emsp;在用户桌面和“开始菜单”创建快捷方式、注册AMUID
 
@@ -74,13 +74,13 @@
 
 &emsp;*仅在缺失“开始菜单”**快捷方式**时启用* 
 
-&emsp;#####  Program.writeConfig
+##### &emsp;Program.writeConfig
 
 &emsp;保存新的配置信息
 
 &emsp;key:信息对应的键, value:信息的内容
 
-&emsp;##### Program.writeLog
+##### &emsp;Program.writeLog
 
 &emsp;写入日志，在控制台输出信息
 
@@ -94,35 +94,35 @@
 
 &emsp;**runCount** :用于计数程序运行成功的次数，1为开始，2为第一次成功
 
-&emsp;##### systemStatu.relaxTime
+##### &emsp;systemStatu.relaxTime
 
 &emsp;计算返回**程序运行时长** ,**距离上一次运行成功的时长**，**两次调用该函数的时差**
 
 &emsp;update:是否更新运行成功的时刻
 
-&emsp;##### systemStatu.internetTest
+##### &emsp;systemStatu.internetTest
 
 &emsp;测试系统网络，并返回网络报告，报告形式如下：
 
 &emsp; ```Python
-  {
-      网络是否连通 'internets': , 电脑是否登录(校园网) 'isLogin': , 
-      网络适配器:
-      {
-          网络适配器数量, 适配器1, 适配器2, ···
-      }
-  }
-  ```
+&emsp;  {
+&emsp;      网络是否连通 'internets': , 电脑是否登录(校园网) 'isLogin': , 
+&emsp;      网络适配器:
+&emsp;      {
+&emsp;          网络适配器数量, 适配器1, 适配器2, ···
+&emsp;      }
+&emsp;  }
+&emsp;  ```
 
 &emsp;checkLogon: 是否检查登录情况，选择否可以减小服务器压力
 
-&emsp;##### systemStatu.connect_WLAN
+##### &emsp;systemStatu.connect_WLAN
 
 &emsp;按需连接WIFI（实际上还不支持选择接口）
 
 &emsp;allowWLAN: 用户配置的允许连接的网络, scanResult: 附近的WLAN, interface: 选择的接口
 
-&emsp;##### systemStatu.connectWLAN 
+##### &emsp;systemStatu.connectWLAN 
 
 &emsp;扫描WIFI与调用<code>systemStatu.connect_WLAN</code>来连接WIFI
 
@@ -132,13 +132,13 @@
 
 #### NetConnect
 
-&emsp;#####  NetConnect.logonServer
+##### &emsp;NetConnect.logonServer
 
 &emsp;服务登录函数，使用此函数登录校园网. 返回userIndex和query
 
 &emsp;userId: 用户ID(默认为学号), password: 密码, encrtpted: 密码是否经过学校密钥加密
 
-&emsp;#####  NetConnect.accontInfo
+##### &emsp;NetConnect.accontInfo
 
 &emsp;获取用户信息，返回以下信息:
 
@@ -146,7 +146,7 @@
 
 &emsp;userIndex: 用户识别码(由服务器提供), rebreak: 防止无限递归
 
-&emsp;#####  systemStatu.EncryptPassword
+##### &emsp;systemStatu.EncryptPassword
 
 &emsp;获取密钥对密码进行加密，返回加密后的密码。调用**encrypt** 库
 
@@ -164,23 +164,23 @@
 
 &emsp; > title: 通知标题, body: 通知内容, head: 通知内容/进度条内容, left: 进度条进度信息, progress: 进度条进度, right: 进度条目的信息, update: 是否更新信息/通知消息，确认调用函数
 
-&emsp;#####  Popup.Process
+##### &emsp;Popup.Process
 
 &emsp;显示/更新**动态通知消息** 
 
-&emsp;#####  Popup.Basic
+##### &emsp; Popup.Basic
 
 &emsp;显示/更新**基础通知消息** ，会清除之前的**动态通知消息** 
 
-&emsp;#####  Popup.ActionBasic
+##### &emsp;Popup.ActionBasic
 
 &emsp;显示/更新**基础通知消息** ，会清除之前的**动态通知消息** 。支持“重试”操作
 
-&emsp;#####  Popup.toastReset
+##### &emsp;Popup.toastReset
 
 &emsp;为需要的通知消息进行内容更新
 
-&emsp;#####  Popup.setCallback
+##### &emsp;Popup.setCallback
 
 &emsp;“重试”的默认回调函数
 
@@ -188,15 +188,15 @@
 
 模拟JavaScript对密码进行RAS加密，[前端RSA工具security.js](https://blog.csdn.net/qq_45829350/article/details/107157966)
 
-&emsp;#### encrypt
+#### encrypt
 
-&emsp;####  encrypt.encryptPsw
+##### &emsp;encrypt.encryptPsw
 
 &emsp;获取参数，调用<code>encrypt.rsa_passwd_get</code>对密码进行加密，返回加密和的密码
 
 &emsp;password: 待加密密码, publicKeyExponent, publicKeyModulus
 
-&emsp;- ####  encrypt.rsa_passwd_get
+##### &emsp;encrypt.rsa_passwd_get
 
 &emsp;允许JavaScript代码对密码进行加密，返回加密后的代码
 
