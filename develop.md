@@ -34,7 +34,7 @@
 
 &emsp;**current_user** :保存当前系统的登录账户名
 
-&emsp;##### Program.autoLogon
+##### &emsp;Program.autoLogon
 
 &emsp; 自动登录函数，使用此函数进行登录
 
