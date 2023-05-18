@@ -38,7 +38,7 @@
 
 ### 试用
 
-在[release]()中下载最新版
+在[release](https://github.com/kaivictor/AutoConnect/releases)中下载最新版
 
 根据程序提示来使用
 
