@@ -18,11 +18,11 @@
 
 &emsp;包装主程序，并对程序运行提供保障
 
-&emsp;####  main
+##### &emsp;main
 
 &emsp;主函数
 
-&emsp;####  setBuglog
+##### &emsp;setBuglog
 
 &emsp;设置bug记录器（内测版本支持）
 
@@ -105,14 +105,15 @@
 &emsp;测试系统网络，并返回网络报告，报告形式如下：
 
 &emsp; ```Python
-&emsp;  {
-&emsp;      网络是否连通 'internets': , 电脑是否登录(校园网) 'isLogin': , 
-&emsp;      网络适配器:
-&emsp;      {
-&emsp;          网络适配器数量, 适配器1, 适配器2, ···
-&emsp;      }
-&emsp;  }
-&emsp;  ```
+{
+     网络是否连通 'internets': , 电脑是否登录(校园网) 'isLogin': , 
+     网络适配器:
+     {
+         网络适配器数量, 适配器1, 适配器2, ···
+     }
+}
+&emsp;```
+
 
 &emsp;checkLogon: 是否检查登录情况，选择否可以减小服务器压力
 
@@ -142,7 +143,7 @@
 
 &emsp;获取用户信息，返回以下信息:
 
-&emsp;> apMac, message, portalIp, realServiceName, redirectUrl, result, userGroup, userId, userIndex, userIp, userMac, userName, userPackage, welcomeTip
+> &emsp;apMac, message, portalIp, realServiceName, redirectUrl, result, userGroup, userId, userIndex, userIp, userMac, userName, userPackage, welcomeTip
 
 &emsp;userIndex: 用户识别码(由服务器提供), rebreak: 防止无限递归
 
