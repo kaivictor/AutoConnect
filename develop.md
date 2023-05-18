@@ -104,7 +104,7 @@
 
 &emsp;测试系统网络，并返回网络报告，报告形式如下：
 
-&emsp; ```Python
+```Python
 {
      网络是否连通 'internets': , 电脑是否登录(校园网) 'isLogin': , 
      网络适配器:
@@ -112,7 +112,7 @@
          网络适配器数量, 适配器1, 适配器2, ···
      }
 }
-&emsp;```
+```
 
 
 &emsp;checkLogon: 是否检查登录情况，选择否可以减小服务器压力
@@ -163,7 +163,7 @@
 
 &emsp;**Popup.callbackFunc**: 指定回调函数
 
-&emsp; > title: 通知标题, body: 通知内容, head: 通知内容/进度条内容, left: 进度条进度信息, progress: 进度条进度, right: 进度条目的信息, update: 是否更新信息/通知消息，确认调用函数
+> title: 通知标题, body: 通知内容, head: 通知内容/进度条内容, left: 进度条进度信息, progress: 进度条进度, right: 进度条目的信息, update: 是否更新信息/通知消息，确认调用函数
 
 ##### &emsp;Popup.Process
 
