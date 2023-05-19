@@ -276,7 +276,7 @@ Programs\\AutoConnect.lnk")
         self.loginFunc = logonServer.NetConnect()
         runtimes = 1  # 测试用
         while True:
-            # 等待 5秒 重新执行
+            # 等待 3秒 重新执行
             # 值小可以实现休眠后连接，值大实现实时检测
             time.sleep(3)
             # if (arguement)  对参数进行处理,暂时用不到
@@ -296,6 +296,12 @@ Programs\\AutoConnect.lnk")
             runtimes += 1
             # 为1,即第一次运行才会处理,只考虑一次,如果是用户自行断网,日志也不考虑
             if self.systemInfo.runCount > 1:
+                continue
+            if step.isTrue is True and step.msg == 'Login succeeded':
+                self.writeLog("登录成功")
+                self.systemInfo.relaxTime(True)                # 成功后更新时间
+                if arguement is not None:
+                    break  # 重试只运行一次
                 continue
             if step.isTrue is True and step.msg == 'Is online':
                 self.writeLog("网络连接成功")
@@ -367,5 +373,3 @@ if __name__ == '__main__':
     test.check()
     test.main()
     # print(test.loadConfig())
-
-# 增加线程
