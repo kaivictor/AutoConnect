@@ -48,6 +48,14 @@
 
 &emsp;检查网络函数，使用此函数返回网络检测信息
 
+&emsp;网络检测:
+
+```Python
+import ping3  // 更快地检测连通性
+
+ping3.ping(hostname)
+```
+
 &emsp;config:用户配置文件数据, popToast:弹窗主体变量, driver:网络适配器信息
 
 ##### &emsp;Program.loadConfig
@@ -294,3 +302,7 @@
 4. 弃用错误类型（我不确定该不该这么做）
 5. 修复了loadcofig函数中一fan个return缺失值的隐藏bug
 6. 取消了只有待机后才能执行下一次联网的设置
+
+2023-5-20 接学长建议，考虑使用返回的状态码来判断是否登录
+1. 检测网络连通性用ping3应该会比request好。如果request通，用ping来的更快；判断有没有登录，request本地的aaa.cqust.edu.cn会更快。也少占用点学生资源。（频繁request怕服务器受不了）
+2. 主要问题是这个项目需要很快的检测百度能不能连接。
