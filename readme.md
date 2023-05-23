@@ -38,7 +38,7 @@
 
 ### 试用
 
-在[release](https://github.com/kaivictor/AutoConnect/releases)中下载最新版
+在[release](https://github.com/kaivictor/AutoConnect/releases)中下载最新版(会在积累一定多的错误或存在致命错误时或者添加新功能后更新)
 
 根据程序提示来使用
 
@@ -125,6 +125,9 @@
 * Q: WLAN和有线同时使用的时候电脑没有网络却不帮我自动连接
 
   A: 前提应该是您的WLAN可以上网，此时可能是程序刚检查完一次网络，尚未开始下一次检测；也有可能您的WLAN比有线网络跳数更低（更快）以至于系统选择WLAN（非本程序设置）。
+
+更多问题请见[开发者文档](./develop.md)
+
 
 
 
