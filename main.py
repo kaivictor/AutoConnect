@@ -294,19 +294,18 @@ Programs\\AutoConnect.lnk")
             print(self.systemInfo.runCount, step.isTrue, step.msg)
             print("runtimes %d" % runtimes)
             runtimes += 1
+            self.systemInfo.relaxTime(True)                # 运行后更新时间
             # 为1,即第一次运行才会处理,只考虑一次,如果是用户自行断网,日志也不考虑
             if self.systemInfo.runCount > 1:
                 continue
             if step.isTrue is True and step.msg == 'Login succeeded':
                 self.writeLog("登录成功")
-                self.systemInfo.relaxTime(True)                # 成功后更新时间
                 if arguement is not None:
                     break  # 重试只运行一次
                 continue
             if step.isTrue is True and step.msg == 'Is online':
                 self.writeLog("网络连接成功")
                 self.deskToast.Basic(title='你已连接网络', body='请合理使用')
-                self.systemInfo.relaxTime(True)                # 成功后更新时间
                 if arguement is not None:
                     break  # 重试只运行一次
                 continue
