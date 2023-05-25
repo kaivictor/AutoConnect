@@ -294,10 +294,10 @@ Programs\\AutoConnect.lnk")
             print(self.systemInfo.runCount, step.isTrue, step.msg)
             print("runtimes %d" % runtimes)
             runtimes += 1
-            self.systemInfo.relaxTime(True)                # 运行后更新时间
             # 为1,即第一次运行才会处理,只考虑一次,如果是用户自行断网,日志也不考虑
             if self.systemInfo.runCount > 1:
                 continue
+            self.systemInfo.relaxTime(True)                # 运行后更新时间
             if step.isTrue is True and step.msg == 'Login succeeded':
                 self.writeLog("登录成功")
                 if arguement is not None:
