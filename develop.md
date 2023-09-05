@@ -24,7 +24,7 @@
 
 ##### &emsp;setBuglog
 
-&emsp;设置bug记录器（内测版本支持）
+&emsp;设置bug记录器（内测版本支持）（我好像了解了logging函数的使用办法，这会在之后的开发中学习）
 
 ### main
 
